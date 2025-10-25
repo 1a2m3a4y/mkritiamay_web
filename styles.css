@@ -1,0 +1,153 @@
+:root{
+  --accent:#936e4a;     /* warm earthy */
+  --accent-2:#bfa889;
+  --muted:#6b6b6b;
+  --bg:#f7f3ee;
+  --card:#ffffff;
+  --container:1200px;
+  --shadow: 0 8px 20px rgba(0,0,0,0.04);
+  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#222;
+  line-height:1.5;
+  font-size:16px;
+}
+.container{max-width:var(--container);margin:0 auto;padding:0 18px}
+
+/* Header */
+.site-header{
+  background:linear-gradient(90deg,#fff,#fff);
+  position:sticky;
+  top:0;
+  z-index:60;
+  box-shadow:0 2px 12px rgba(0,0,0,0.04);
+}
+.header-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{height:56px;width:auto;object-fit:contain;border-radius:6px}
+.brand-text h1{margin:0;font-size:18px}
+.tag{margin:0;color:var(--muted);font-size:13px}
+
+/* Nav */
+.main-nav{display:flex;gap:18px;align-items:center}
+.main-nav a{text-decoration:none;color:inherit;padding:8px;border-radius:8px;font-weight:500}
+.main-nav a:hover{background:rgba(147,110,74,0.06);color:var(--accent)}
+.mobile-menu-btn{display:none;border:none;background:transparent;font-size:20px;padding:6px;cursor:pointer}
+
+/* Hero */
+.hero{padding:56px 0;background:linear-gradient(180deg, rgba(151,108,74,0.06), rgba(191,168,137,0.03))}
+.hero-grid{display:grid;grid-template-columns:520px 1fr;gap:28px;align-items:center}
+/* Media card */
+.media-card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);padding:0}
+.hero-image {
+  width:100%;
+  height:auto;          /* keeps aspect ratio — no cropping */
+  border-radius:12px 12px 0 0;
+  object-fit:contain;   /* show full image */
+  display:block;
+}
+.media-caption{padding:12px;font-size:13px;color:var(--muted)}
+
+/* Hero text */
+.hero-text h2{font-size:34px;margin:0 0 10px;color:#2b2b2b}
+.lead{color:#444;max-width:56ch}
+.hero-actions{margin-top:18px;display:flex;gap:12px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;border:1px solid rgba(0,0,0,0.06);background:transparent;font-weight:600}
+.btn.primary{background:var(--accent);color:#fff;border:none}
+.small{font-size:13px;color:var(--muted)}
+
+/* Sections */
+.section{padding:40px 0}
+.section.alt{background:transparent}
+.highlight{background:linear-gradient(90deg,#f1e9df,#efe7da);border-top:1px solid rgba(0,0,0,0.02);border-bottom:1px solid rgba(0,0,0,0.02)}
+.section h3{font-size:22px;margin:0 0 10px;color:#2b2b2b}
+
+/* Two-column area for Sai Chandra & Mohini */
+.two-col{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start}
+.col-left h3{margin-top:0}
+
+/* Bullet lists */
+.bullet{margin:12px 0 18px;padding-left:18px}
+.bullet li{margin:8px 0;color:#333}
+
+/* Flats table */
+.flat-table{width:100%;border-collapse:collapse;margin:12px 0 18px;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+.flat-table th, .flat-table td{padding:10px 12px;border-bottom:1px solid #f0e7df;text-align:left;font-size:14px}
+.flat-table thead th{background:#efe7da;color:#3a2f24;font-weight:700}
+
+/* Gallery / brochure */
+.gallery img, .brochure-img{width:100%;height:220px;object-fit:cover;border-radius:10px;display:block}
+.gallery-caption{font-size:13px;color:var(--muted);margin-top:8px}
+.brochure-block{display:flex;gap:14px;margin:18px 0;align-items:flex-start;background:var(--card);padding:12px;border-radius:10px;box-shadow:var(--shadow)}
+.brochure-img{width:220px;height:160px;object-fit:cover;border-radius:8px;border:1px solid #eee}
+.brochure-text{flex:1;color:#333;font-size:14px}
+.brochure-text strong{display:block;margin-bottom:6px}
+#img1-text,#img2-text{color:#555;margin-top:6px}
+
+/* Projects */
+.section-header{display:flex;justify-content:space-between;align-items:center}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+.project-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+.project-card h4{margin:0 0 8px}
+.project-card p{color:#444}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+.contact-list{list-style:none;padding-left:0}
+.contact-list li{margin:8px 0;color:#333}
+
+/* Footer */
+.site-footer{background:#fff;border-top:1px solid rgba(0,0,0,0.04);padding:18px 0;margin-top:18px}
+.footer-row{display:flex;align-items:center;justify-content:space-between}
+.footer-links a{margin-left:14px;color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--accent)}
+
+/* Lightbox modal (hidden by default) */
+#lightbox {
+  display:none;
+  position:fixed;
+  z-index:200;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+#lightbox img { max-width:100%; max-height:90vh; border-radius:10px; box-shadow:0 12px 40px rgba(0,0,0,0.6); }
+
+/* Tiny */
+.tiny{font-size:13px;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:1100px){
+  .hero-grid{grid-template-columns:420px 1fr}
+  .two-col{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .main-nav{display:none}
+  .mobile-menu-btn{display:block}
+  .logo{height:48px}
+  .brochure-img{width:140px;height:120px}
+  .hero-media img{height:auto}
+}
+
+@media (max-width:760px){
+  .hero-grid{grid-template-columns:1fr;gap:18px}
+  .media-card{width:100%}
+  .hero-image{height:auto}
+  .hero-text{text-align:center}
+}
+
+@media (max-width:520px){
+  .brochure-block{flex-direction:column;align-items:center}
+  .brochure-img{width:100%;height:180px}
+  .hero-media img{height:160px}
+}
